@@ -1,0 +1,39 @@
+
+<div style="text-align:center">
+  <h1 colorHighlight>
+      Welcome to reactive-form!
+  </h1>
+</div>
+
+<button (click)="goToTemplateForm()"> Go to template form</button>
+
+<form [formGroup]="forms" (ngSubmit)="submit()">
+  <div class="form-group">
+    <label for="exampleInputEmail1">Email address</label>
+    <input type="email" name="email" formControlName="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp"
+      placeholder="Enter email">
+    <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+
+    <!-- <div *ngIf="vform.form.controls.email?.touched && vform.form.value.email?.length==0" class="alert alert-danger"
+      role="alert">
+      Fill the email
+    </div> -->
+
+  </div>
+  <div class="form-group">
+    <label for="exampleInputPassword1">Password</label>
+    <input type="password" name="password" formControlName="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
+
+    <!-- <img (click)="toggleShowPassword()" class="eye-icon" src="assets/images/eye.png" /> -->
+
+    <!-- <div *ngIf="vform.form.controls.password?.touched && vform.form.value.password?.length==0"
+      class="alert alert-danger" role="alert">
+      Fill the password
+    </div> -->
+
+  </div>
+
+  <!-- <button [disabled]="!vform.valid" (click)="submit()" class="btn btn-primary">Submit</button> -->
+  <button type="submit()" class="btn btn-primary">Submit</button>
+
+</form>

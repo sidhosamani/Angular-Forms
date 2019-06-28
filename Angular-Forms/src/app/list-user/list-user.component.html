@@ -1,0 +1,16 @@
+
+<h3>Dynamic list data</h3>
+
+<div>
+  <ol *ngIf="userslist.length > 0" type="A">
+    <li *ngFor="let user of userslist">{{user.name}}</li>
+  </ol> 
+
+  <span *ngIf="userslist.length == 0">No users found</span>
+</div>
+
+<br/>
+<br/>
+<br/>
+
+<button (click)="backToTemplate()">back to template</button>
